@@ -1,7 +1,0 @@
-db.sqlite3
-__pycashe__
-media/avatars
-media/product_images
-venv/
-migrations/
-
