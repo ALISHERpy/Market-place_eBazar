@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block title %}
   E-Bazar - {{category}}
 {% endblock title %}
@@ -7,7 +8,7 @@
    <!-- Product Cart Start -->
    <div class="container">
     <div class=" w-100 mt-4">
-        <h4 class="d-block" >Recently Products in {{category}}</h4>
+        <h4 class="d-block" >{% trans "Recently Products in" %} {{category}}</h4>
         <div class="d-flex flex-wrap justify-content-between">
             {% for i in products %}
             <!-- Product Cart Start -->
@@ -22,7 +23,7 @@
                     <span class="center card-text"><small>$ {{i.price}}</small></span>
                     <div class="buttons d-flex flex-wrap justify-content-between ">
                         <i class="bi bi-bookmark-fill"></i> 
-                        <a href="{% url 'products:detail' i.id %}" class="btn btn-outline-primary" >Details</a>
+                        <a href="{% url 'products:detail' i.id %}" class="btn btn-outline-primary" >{% trans "Details" %}</a>
                     </div>
                 </div>
             </div>  

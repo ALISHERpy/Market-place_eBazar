@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block title %}
    E-Bazar - {{product.title}}
 {% endblock title %}
@@ -40,10 +41,10 @@
                 <p >{{product.description|safe}}</p>
                 <div class="contact mt-4 ">
                     {% if request.user == product.author %}
-                    <a class="btn btn-warning" href="{% url 'products:update' product.id %}">Edit details</a>
+                    <a class="btn btn-warning" href="{% url 'products:update' product.id %}">{% trans "Edit details<" %}/a>
                     {% endif %}
-                    <a class="btn btn-primary" href="mailto:{{product.author.email}}">Email</a>
-                    <a class="btn btn-primary" href="tel:{{product.phone_number}}">Call</a>
+                    <a class="btn btn-primary" href="mailto:{{product.author.email}}">{% trans "Email" %}</a>
+                    <a class="btn btn-primary" href="tel:{{product.phone_number}}">{% trans "Call" %}</a>
                     <a class="btn btn-secondary" href="http://t.me/{{product.tg_username}}">Telegram</a>
                 </div>
             </div>
@@ -61,7 +62,7 @@
                             <span class="center card-text">${{i.price}}</span>
                             <div class="buttons d-flex flex-wrap justify-content-between ">
                                 <i class="bi bi-bookmark-fill"></i> 
-                                <a href="{% url 'products:detail' i.id %}" class="btn btn-outline-primary" >Details</a>
+                                <a href="{% url 'products:detail' i.id %}" class="btn btn-outline-primary" >{% trans "Details" %}</a>
                             </div>
                         </div>
                     </div>
@@ -73,7 +74,7 @@
                 <h6 class="pt-2" >Add comment</h6>
                 <form action="{% url 'products:comment_new' product.id %}" method="post" class="input-group"> {% csrf_token %}
                     <input class="form-control" name="body" type="text" placeholder="Type your comment..." aria-describedby="'button-addon" >
-                    <button class="btn btn-outline-success" type="submit" id="button-addon">Send</button>
+                    <button class="btn btn-outline-success" type="submit" id="button-addon">{% trans "Send" %}</button>
                 </form>  
                 <hr>
                 <h6>Comments</h6>
@@ -81,7 +82,7 @@
                 <small class="text-muted" >@{{comment.author}} | {{comment.date}}</small>
                 <p>{{comment.body}} 
                     {% if request.user == comment.author %}
-                        <small><a href="{% url 'products:comment_delete' product.id comment.id   %}">delete</a></small>  
+                        <small><a href="{% url 'products:comment_delete' product.id comment.id   %}">{% trans "delete" %}</a></small>  
                     {% endif %}
                      
                 </p>  

@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% block title %}
-  New Product
+  {% trans "New Product" %}
 {% endblock title %}
 
 {% block content %}
@@ -9,11 +10,11 @@
     <div class="row">
         <div class="col"></div>
         <div class="col-6 mt-5 ">
-            <h2>New Product</h2>
+            <h2>{% trans "New Product" %}</h2>
             <form  method="post" enctype="multipart/form-data" >{% csrf_token %}
                 {{form|crispy}}
-                <button type="submit" class="btn btn-primary" >Submit</button>
-                <a class="btn btn-secondary" href="{% url 'main:index'  %}"> Back home</a>
+                <button type="submit" class="btn btn-primary" >{% trans "Submit" %}</button>
+                <a class="btn btn-secondary" href="{% url 'main:index'  %}"> {% trans "Back home" %}</a>
             </form>
         </div>
         <div class="col"></div>

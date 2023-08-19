@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-19 21:34+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\core\settings.py:141
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: .\core\settings.py:142
+msgid "English"
+msgstr "English"
+
+#: .\core\settings.py:143
+msgid "Russian"
+msgstr "Russian"
+
+#: .\qollanma.txt:47
+msgid "Hello World"
+msgstr "Hello World"
+
+#: .\templates\base.html:32
+msgid "Categories"
+msgstr "Categories"
+
+#: .\templates\base.html:43
+msgid "Add Product"
+msgstr "Add Product"
+
+#: .\templates\base.html:46
+msgid "Saveds"
+msgstr "Saveds"
+
+#: .\templates\base.html:49
+msgid "Recently Viewed"
+msgstr ""
+
+#: .\templates\base.html:56
+msgid "Search"
+msgstr ""
+
+#: .\templates\base.html:66
+msgid "Profile"
+msgstr ""
+
+#: .\templates\base.html:69
+msgid "Change password"
+msgstr ""
+
+#: .\templates\base.html:70
+msgid "Logout"
+msgstr ""
+
+#: .\templates\base.html:73
+msgid "Login"
+msgstr ""
+
+#: .\templates\base.html:74
+msgid "SignUp"
+msgstr ""
+
+#: .\templates\category.html:11
+msgid "Recently Products in"
+msgstr ""
+
+#: .\templates\category.html:26 .\templates\index.html:30
+#: .\templates\product_detail.html:65 .\templates\profile.html:53
+#: .\templates\recently_viewed.html:29 .\templates\saveds.html:26
+msgid "Details"
+msgstr ""
+
+#: .\templates\index.html:12
+msgid "Recently Products"
+msgstr ""
+
+#: .\templates\product_delete.html:5 .\templates\product_update.html:17
+msgid "Delete"
+msgstr ""
+
+#: .\templates\product_delete.html:13
+msgid "Are you sure to delete"
+msgstr ""
+
+#: .\templates\product_delete.html:16 .\templates\product_new.html:16
+#: .\templates\product_update.html:16 .\templates\profile_update.html:16
+msgid "Submit"
+msgstr ""
+
+#: .\templates\product_delete.html:17 .\templates\product_update.html:18
+msgid "Back Detail"
+msgstr ""
+
+#: .\templates\product_detail.html:44
+msgid "Edit details<"
+msgstr ""
+
+#: .\templates\product_detail.html:46 .\templates\profile.html:21
+msgid "Email"
+msgstr ""
+
+#: .\templates\product_detail.html:47 .\templates\profile.html:22
+msgid "Call"
+msgstr ""
+
+#: .\templates\product_detail.html:77
+msgid "Send"
+msgstr ""
+
+#: .\templates\product_detail.html:85
+msgid "delete"
+msgstr ""
+
+#: .\templates\product_new.html:5 .\templates\product_new.html:13
+msgid "New Product"
+msgstr ""
+
+#: .\templates\product_new.html:17
+msgid "Back home"
+msgstr ""
+
+#: .\templates\product_update.html:5 .\templates\product_update.html:13
+msgid "Update Product"
+msgstr ""
+
+#: .\templates\profile.html:18
+msgid "Edit details"
+msgstr ""
+
+#: .\templates\profile.html:19
+msgid "Update Password"
+msgstr ""
+
+#: .\templates\profile.html:35
+msgid "Recently Products of"
+msgstr ""
+
+#: .\templates\profile.html:37
+msgid "There is no products"
+msgstr ""
+
+#: .\templates\profile_update.html:5 .\templates\profile_update.html:13
+msgid "Update Profile"
+msgstr ""
+
+#: .\templates\profile_update.html:17
+msgid "Back"
+msgstr ""
+
+#: .\templates\recently_viewed.html:4
+msgid "E-Bazar - Recently Viewed"
+msgstr ""
+
+#: .\templates\recently_viewed.html:11
+msgid "Recently Viewed Products"
+msgstr ""
+
+#: .\templates\saveds.html:11
+msgid "Saved Products of"
+msgstr ""

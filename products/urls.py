@@ -1,7 +1,8 @@
 from django.urls import path
 from .views import new_product, product_detail, product_update, product_delete, new_comment, delete_comment
 
-app_name = 'products' # {% url 'products:new' %}
+app_name = 'products'
+ # {% url 'products:new' %}
 urlpatterns = [
     path("new", new_product, name='new'),
     path("<int:product_id>/detail", product_detail, name='detail'),

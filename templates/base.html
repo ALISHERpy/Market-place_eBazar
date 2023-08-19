@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@
               <li class="nav-tem">
                 <div class="btn-group">
                   <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                    Categories
+                    {% trans "Categories" %}
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg">
                         {% for i in categories %}
@@ -39,21 +40,20 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'products:new' %}">Add Product</a>
+                <a class="nav-link" href="{% url 'products:new' %}"> {% trans 'Add Product' %} </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'users:saveds' %}">Saveds</a>
+                <a class="nav-link" href="{% url 'users:saveds' %}">{% trans 'Saveds' %}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'users:recently_viewed' %}">Recently Viewed</a>
+                <a class="nav-link" href="{% url 'users:recently_viewed' %}">{% trans 'Recently Viewed' %}</a>
               </li>
-              
-              
+                            
             </ul>
               <div class="btn-group">
                 <form class="d-flex " role="search">
                   <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <button class="btn btn-outline-success" type="submit">{% trans 'Search' %}</button>
                 </form>
                 {% if request.user.is_authenticated %}
             
@@ -62,18 +62,30 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg">
                   {% comment %} <li><a class="dropdown-item" href="{% url 'users:profile' %}">Profile</a></li> {% endcomment %}
-                  <li><a class="dropdown-item" href="{% url 'users:profile' username=user.username %}">Profile</a></li>
+                  <li><a class="dropdown-item" href="{% url 'users:profile' username=user.username %}">{% trans 'Profile' %}</a></li>
 
                   
-                  <li><a class="dropdown-item" href="{% url 'password_change' %}">Change password</a></li>
-                  <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                  <li><a class="dropdown-item" href="{% url 'password_change' %}">{% trans 'Change password' %}</a></li>
+                  <li><a class="dropdown-item" href="{% url 'logout' %}">{% trans "Logout" %}</a></li>
                 </ul>
                 {% else %}
-                <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
-                <a href="{% url 'users:signup' %}" class="btn btn-primary">SignUp</a>
+                <a href="{% url 'login' %}" class="btn btn-primary">{% trans "Login" %}</a>
+                <a href="{% url 'users:signup' %}" class="btn btn-primary">{% trans "SignUp" %}</a>
                 {% endif %}
               </div>
           </div>
+
+              {% get_current_language as current_language %}
+              {% get_available_languages as available_languages %}
+              {% get_language_info_list for available_languages as langs %}
+            <button class="btn badge bg-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{current_language}} 
+            </button>
+            <ul class="dropdown-menu">
+            {% for i in langs %}
+            <li><a class="dropdown-item"  href="/{{i.code}}">{{i.name_local}}</a></li>
+            {% endfor %}
+            
         </div>
     </nav>
     <!-- Navbar End -->
