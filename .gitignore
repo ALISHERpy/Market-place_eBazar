@@ -1,2 +1,4 @@
 venv/
-db.sqlite3
+.db.sqlite3/
+.qollanma.txt
+__pycache__/
