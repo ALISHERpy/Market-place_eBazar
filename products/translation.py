@@ -1,4 +1,4 @@
-from .models import Product,Category
+from .models import Product,Category,Comment
 from modeltranslation.translator import TranslationOptions, register
 
 
@@ -9,3 +9,8 @@ class NewsTranslationOptions(TranslationOptions):
 @register(Category)
 class CategoriesTranslationOptions(TranslationOptions):
     fields = ("name",)
+    
+@register(Comment)
+class CommintTranslationOptions(TranslationOptions):
+    fields = ('product',  'body', )
+    

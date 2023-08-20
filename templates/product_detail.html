@@ -51,7 +51,7 @@
         </div>
         <div class="row ">  
             <div class="col-8 mt-5" >
-                <h6  >In This Category</h6> 
+                <h6  >{% trans "In This Category" %}</h6> 
                 <div class="d-flex flex-wrap justify-content-between">
                     {% for i in product.category.product_set.all %}
                     {% if product != i %}

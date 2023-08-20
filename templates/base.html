@@ -75,17 +75,24 @@
               </div>
           </div>
 
+          
+            <div class="btn-group">
               {% get_current_language as current_language %}
               {% get_available_languages as available_languages %}
               {% get_language_info_list for available_languages as langs %}
-            <button class="btn badge bg-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {{current_language}} 
-            </button>
-            <ul class="dropdown-menu">
-            {% for i in langs %}
-            <li><a class="dropdown-item"  href="/{{i.code}}">{{i.name_local}}</a></li>
-            {% endfor %}
-            
+              
+              <button class="btn badge bg-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ current_language }} 
+              </button>
+              
+              <ul class="dropdown-menu">
+                  {% for lang in langs %}
+                      <li><a class="dropdown-item" href="/{{ lang.code }}">{{ lang.name_local }}</a></li>
+                  {% endfor %}
+              </ul>
+          </div>
+          
+          
         </div>
     </nav>
     <!-- Navbar End -->

@@ -24,7 +24,7 @@
                     <span class="center card-text"><small>$ {{i.price}}</small></span>
                     <div class="buttons d-flex flex-wrap justify-content-between ">
                         {% comment %} <a href="{% url 'users:addremovesaved' i.id %}">📥</a> {% endcomment %}
-                        <a href="{% url 'users:addremovesaved' i.id %}"> <img src="media/avatars/basket.png"  alt="Large Image" width="80" height="60"> </a>
+                        <a href="{% url 'users:addremovesaved' i.id %}"> <img src="media/avatars/basket.png"  alt="Basket" width="80" height="60"> </a>
                         
                         <a href="{% url 'products:detail' i.id %}" class="btn btn-outline-primary" >{% trans "Details" %}</a>
                     </div>

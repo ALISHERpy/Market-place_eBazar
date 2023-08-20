@@ -1,5 +1,5 @@
 venv/
-.db.sqlite3/
-.qollanma.txt
+db.sqlite3/
+qollanma.txt
 __pycache__/
 migrations/
